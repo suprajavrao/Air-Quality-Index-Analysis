@@ -19,5 +19,3 @@ data/raw/
 data/processed/combined_raw_sample.csv
 data/processed/combined_raw_sample.pkl
 
-# Empty directory accidentally created by an unexpanded glob
-data/{raw,processed}/
