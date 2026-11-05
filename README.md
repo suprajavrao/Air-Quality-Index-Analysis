@@ -9,8 +9,12 @@ collected from <https://data.opencity.in/dataset/bengaluru-hourly-air-quality-re
 ## Interactive dashboard (Phase 1 + Phase 2)
 
 ```bash
-cd AirQuality_Bengaluru_Analysis
+git clone https://github.com/suprajavrao/Air-Quality-Index-Analysis.git
+
+cd Air-Quality-Index-Analysis
+
 pip install -r requirements_gui.txt
+
 streamlit run app.py
 ```
 
@@ -34,7 +38,7 @@ predictor set. Every displayed number is computed live from the processed data.
 ## Command-line analysis
 
 ```bash
-cd AirQuality_Bengaluru_Analysis/src
+cd src
 python analyze_small.py        # end-to-end analysis, writes results/ and reports/
 ```
 
