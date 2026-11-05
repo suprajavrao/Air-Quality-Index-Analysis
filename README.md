@@ -3,6 +3,16 @@
 Statistical Analysis and Predictive Modelling of Air Quality in Bengaluru using
 Classical Regression and Machine Learning Techniques (AAT project).
 
+
+## 🚀 Live Dashboard
+
+Explore the interactive Bengaluru Air Quality Analysis dashboard:
+
+👉 [**Open Live Dashboard**](https://bengaluru-air-quality-analysis.streamlit.app/)
+
+The dashboard includes interactive statistical analysis, classical regression, assumption testing, bootstrap validation, feature selection, and machine learning model comparisons.
+
+
 Target variable: **PM2.5 (µg/m³)** · Source: KSPCB / CPCB hourly station reports
 collected from <https://data.opencity.in/dataset/bengaluru-hourly-air-quality-reports>.
 
