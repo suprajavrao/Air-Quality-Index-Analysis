@@ -1,0 +1,30 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  PM2.5   R-squared:                       0.305
+Model:                            OLS   Adj. R-squared:                  0.304
+Method:                 Least Squares   F-statistic:                     390.3
+Date:                Wed, 04 Nov 2026   Prob (F-statistic):               0.00
+Time:                        00:09:28   Log-Likelihood:                -23198.
+No. Observations:                5354   AIC:                         4.641e+04
+Df Residuals:                    5347   BIC:                         4.646e+04
+Df Model:                           6                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         10.3913      0.784     13.252      0.000       8.854      11.928
+PM10           0.2281      0.006     36.115      0.000       0.216       0.240
+NO             0.4711      0.052      9.062      0.000       0.369       0.573
+NO2           -0.2433      0.021    -11.823      0.000      -0.284      -0.203
+SO2           -0.0980      0.038     -2.610      0.009      -0.172      -0.024
+CO             8.4480      0.683     12.371      0.000       7.109       9.787
+Ozone          0.0054      0.013      0.406      0.684      -0.021       0.031
+==============================================================================
+Omnibus:                    13187.598   Durbin-Watson:                   2.019
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):        264050748.748
+Skew:                          25.851   Prob(JB):                         0.00
+Kurtosis:                    1089.724   Cond. No.                         300.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

@@ -1,0 +1,24 @@
+STATISTICAL ANALYSIS AND PREDICTIVE MODELLING OF AIR QUALITY IN BENGALURU
+USING CLASSICAL REGRESSION AND MACHINE LEARNING TECHNIQUES
+
+Date: 2026-11-04 00:09:30.515550
+Location: Bengaluru, Karnataka, India
+Target Variable: PM2.5
+
+Dataset: 6693 observations
+
+Model Comparison:
+           Model        R2       RMSE
+0          Ridge  0.454570  12.431186
+1          LASSO  0.454551  12.431403
+2  Random Forest  0.786948   7.769382
+3        XGBoost  0.496674  11.941752
+
+MLR Coefficients:
+  Variable  Coefficient
+0     PM10     0.228051
+1       NO     0.471078
+2      NO2    -0.243329
+3      SO2    -0.097980
+4       CO     8.447987
+5    Ozone     0.005391

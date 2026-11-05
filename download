@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Streamlit / local logs
+.streamlit/
+streamlit*.log
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Bulk data (~267 MB): raw station extracts and the duplicate pickle
+# Keep data/processed/model_sample.csv -- the dashboard reads it.
+data/raw/
+data/processed/combined_raw_sample.csv
+data/processed/combined_raw_sample.pkl
+
+# Empty directory accidentally created by an unexpanded glob
+data/{raw,processed}/

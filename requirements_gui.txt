@@ -1,0 +1,18 @@
+# Working dependency set for the Streamlit dashboard (app.py) on this machine.
+# Installed and verified together: Python 3.11, Windows.
+#
+# app.py intentionally avoids pandas and statsmodels (this host has limited free
+# RAM), so only NumPy/SciPy/SciKit/matplotlib/Streamlit are required.
+#
+# Install with:
+#   pip install -r requirements_gui.txt
+#
+# numpy 1.26.x is the last series compiled against the older C ABI that the
+# pinned SciPy/SciKit wheels were built for; NumPy 2.x breaks that pairing here.
+
+numpy==1.26.4
+scipy==1.14.1
+scikit-learn==1.5.2
+matplotlib==3.9.3
+streamlit==1.41.1
+xgboost==2.1.3

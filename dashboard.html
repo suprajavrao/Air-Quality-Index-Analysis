@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bengaluru Air Quality Analysis Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; text-align: center; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        .section { background: white; margin: 2rem 0; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .section h2 { color: #667eea; border-bottom: 3px solid #667eea; padding-bottom: 0.5rem; }
+        .section h3 { color: #764ba2; margin-top: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+        .card { background: #f8f9fa; padding: 1rem; border-radius: 4px; border-left: 4px solid #667eea; }
+        img { max-width: 100%; height: auto; border: 1px solid #ddd; margin: 1rem 0; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        th, td { padding: 12px; text-align: left; border: 1px solid #ddd; }
+        th { background-color: #667eea; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .phase { display: inline-block; padding: 0.5rem 1rem; background: #667eea; color: white; border-radius: 4px; margin: 0.5rem 0; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🌬️ Bengaluru Air Quality Analysis Dashboard</h1>
+        <p>Statistical Analysis & Predictive Modelling using Classical Regression and Machine Learning Techniques</p>
+        <p>Phase 1: Classical Regression & Assumptions | Phase 2: Model Selection & Comparative Evaluation</p>
+    </div>
+    
+    <div class="container">
+        <div class="section">
+            <h2>Project Overview</h2>
+            <div class="grid">
+                <div class="card"><strong>Location:</strong> Bengaluru, Karnataka, India</div>
+                <div class="card"><strong>Target Variable:</strong> PM2.5 (µg/m³)</div>
+                <div class="card"><strong>Objective:</strong> Predict PM2.5 using regression and ML techniques</div>
+                <div class="card"><strong>Dataset:</strong> KSPCB Hourly Air Quality Reports</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2><span class="phase">PHASE 1</span> Classical Regression and Estimator Validation</h2>
+            
+            <h3>Exploratory Data Analysis</h3>
+            <img src="reports/figures/correlation_matrix.png" alt="Correlation Matrix">
+            
+            <h3>Multiple Linear Regression - Model & Coefficients</h3>
+            <p>PM2.5 = Intercept + β₁(PM10) + β₂(NO) + β₃(NO2) + β₄(SO2) + β₅(CO) + β₆(Ozone)</p>
+            <p>See <strong>results/mlr_coefficients.csv</strong> and <strong>results/mlr_summary.txt</strong> for detailed coefficients</p>
+            
+            <h3>Assumption Testing</h3>
+            <div class="grid">
+                <div class="card"><strong>Multicollinearity:</strong> VIF analysis - see results/vif_results.csv</div>
+                <div class="card"><strong>Heteroskedasticity:</strong> Breusch-Pagan test conducted</div>
+                <div class="card"><strong>Autocorrelation:</strong> Durbin-Watson test conducted</div>
+                <div class="card"><strong>Normality:</strong> Residual distribution analysis</div>
+            </div>
+            <img src="reports/figures/residual_vs_fitted.png" alt="Residual vs Fitted Plot">
+        </div>
+        
+        <div class="section">
+            <h2><span class="phase">PHASE 2</span> Model Selection and Comparative Evaluation</h2>
+            
+            <h3>Machine Learning Models Performance</h3>
+            <table>
+                <thead>
+                    <tr><th>Model</th><th>R² Score</th><th>RMSE</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Ridge Regression</td><td>~0.455</td><td>~12.43</td></tr>
+                    <tr><td>LASSO Regression</td><td>~0.455</td><td>~12.43</td></tr>
+                    <tr><td>Random Forest</td><td>~0.787</td><td>~7.77</td></tr>
+                    <tr><td>XGBoost</td><td>~0.497</td><td>~11.94</td></tr>
+                </tbody>
+            </table>
+            <p><em>Random Forest shows the best performance for this dataset.</em></p>
+            
+            <h3>Feature Importance (Random Forest)</h3>
+            <img src="reports/figures/feature_importance_rf.png" alt="Feature Importance">
+        </div>
+        
+        <div class="section">
+            <h2>Results & Files</h2>
+            <div class="grid">
+                <div class="card">
+                    <strong>📊 Results (CSV)</strong><br>
+                    results/descriptive_statistics.csv<br>
+                    results/model_comparison.csv<br>
+                    results/mlr_coefficients.csv<br>
+                    results/vif_results.csv<br>
+                    results/correlation_with_pm25.csv
+                </div>
+                <div class="card">
+                    <strong>📈 Visualizations</strong><br>
+                    reports/figures/correlation_matrix.png<br>
+                    reports/figures/residual_vs_fitted.png<br>
+                    reports/figures/feature_importance_rf.png<br>
+                    reports/figures/slr_regression_line.png
+                </div>
+                <div class="card">
+                    <strong>📄 Reports</strong><br>
+                    reports/Final_Project_Report.txt<br>
+                    results/mlr_summary.txt
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
